@@ -1,0 +1,5 @@
+Git PAT.txt
+*.pat
+.env
+*password*
+*secret*
