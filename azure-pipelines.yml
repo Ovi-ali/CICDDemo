@@ -14,6 +14,10 @@ steps:
   displayName: 'Run a one-line script'
 
 - script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+    if [ -f "Textfile.txt" ]; then
+      echo "SUCCESS: Textfile.txt exists."
+    else
+      echo "ERROR: Textfile.txt does not exist."
+      exit 1
+    fi
+  displayName: 'Check Textfile.txt exists'
